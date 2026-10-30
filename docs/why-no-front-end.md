@@ -1,24 +1,7 @@
-# Why there is no front end
+# Why no front end
 
-Culture Amp is a database with a subscription. The tables underneath it are ordinary: a few entities, a few relationships, a handful of workflows you repeat every week. What you pay for is the layer on top that lets people who do not write SQL get at those tables. Screens, filters, dashboards, forms.
+The weekly job is to read approved survey results, decide what needs attention, assign work, record evidence and review outcomes. A database plus a coding agent can perform those tasks in plain language. Read-only HTML gives the manager a results brief, action plan and outcome note without a separate application to maintain.
 
-That layer used to be the whole product, because talking to a database was hard. It is not hard any more. Open this folder in Claude Code, describe what you want, and it writes the query, runs it, and explains the answer. Ask a question the dashboard never had a chart for and you still get an answer.
+A screen adds employee self-service, survey collection, mobile forms, offline entry, permissions for individual managers and live interactive charts. This base has none of those screens. It has no survey invitations, collection endpoint or external benchmark network. Existing approved collection supplies aggregate reports. Enterprise DNA builds a web front end or survey connection to the agreed scope when the business needs it.
 
-## What you gain
-
-- **Better answers.** A dashboard shows what the vendor decided to chart. Here you ask your own question, in your own words, and get it answered against your own data.
-- **No seats.** Everyone who needs to look can look. The bill does not grow with headcount.
-- **Your data in your Postgres.** Plain tables. Back them up, query them from anything, leave any time. There is no export step because there is nothing to leave.
-- **A process that matches you.** When your way of working changes, you add a command. You do not wait for a feature request to clear.
-
-## What you give up
-
-- **A visual board.** Stages are a table you ask about, not cards you drag.
-- **A phone app.** It runs where Claude Code runs.
-- **A vendor help desk.** This is open source. Enterprise DNA supports the installed version for businesses that want someone to call.
-
-## Who this fits
-
-Small teams who already use Claude Code, or who would rather learn to ask than learn another interface. If your team needs a screen to look at all day, keep Culture Amp. If you need the answers more than the screens, this is cheaper, faster and yours.
-
-Installed and run for you: https://enterprisedna.co/omni/instead-of/culture-amp
+HTML snapshots do not refresh themselves. Re-run npm run view or npm run docs after changing records. /new-view adds a report, not a write interface. Keep every output private until reviewed. Omni by Enterprise DNA installs, customises and runs the system for the owner.

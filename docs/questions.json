@@ -1,0 +1,42 @@
+[
+  [
+    "Which engagement commitments are overdue or blocked?",
+    "attention"
+  ],
+  [
+    "Which weak scores have no active action attached?",
+    "focus-areas"
+  ],
+  [
+    "Which actions have gone quiet for two weeks?",
+    "stale-actions"
+  ],
+  [
+    "Whose open commitments are already late?",
+    "owner-load"
+  ],
+  [
+    "Did later scores meet the targets for completed actions?",
+    "outcome-review"
+  ],
+  [
+    "Which latest results remain withheld?",
+    "confidentiality"
+  ],
+  [
+    "How did the same question change between surveys?",
+    "score-changes"
+  ],
+  [
+    "Which surveys need notice, access or retention evidence reviewed?",
+    "compliance"
+  ],
+  [
+    "What is due before the end of next week?",
+    "actions-due"
+  ],
+  [
+    "Who changed an action and what evidence was recorded?",
+    "show --action=A03"
+  ]
+]

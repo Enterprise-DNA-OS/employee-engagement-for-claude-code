@@ -1,13 +1,44 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Employee Engagement for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Engagement week",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Work requiring attention",
+        "sql": "select code,name,owner,attention,latest_progress from action_queue where attention<>'scheduled' or latest_progress='blocked' order by due_on"
+      },
+      {
+        "title": "Weak scores and assigned work",
+        "sql": "select survey,question,factor,favorable_pct,open_actions from priorities order by closed_on desc,question"
+      }
+    ]
+  },
+  {
+    "name": "results",
+    "title": "Scores and follow-through",
+    "sections": [
+      {
+        "title": "Survey comparisons",
+        "sql": "select survey,question,favorable_pct,change_points,state from score_changes order by closed_on,survey,question"
+      },
+      {
+        "title": "Completed actions and later scores",
+        "note": "A later score is a comparison, not proof that an action caused the change.",
+        "sql": "select code,question,baseline_pct,followup_pct,target_pct,outcome from outcome_review order by code"
+      }
+    ]
+  },
+  {
+    "name": "evidence",
+    "title": "Evidence and confidentiality",
+    "sections": [
+      {
+        "title": "Review work",
+        "sql": "select * from compliance_checks order by record,rule"
+      },
+      {
+        "title": "Withheld scores",
+        "sql": "select survey,question,state from scorecard where state<>'released' order by survey,question"
       }
     ]
   }

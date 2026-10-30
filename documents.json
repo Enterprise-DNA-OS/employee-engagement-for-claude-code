@@ -1,11 +1,55 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "survey-brief",
+    "title": "Survey results brief",
+    "for_each": "select id,code from surveys order by code",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Purpose and ownership",
+        "sql": "select code,name,owner,purpose,closed_on,notice_ref,minimum_responses from surveys where id=$1",
+        "layout": "record"
+      },
+      {
+        "title": "Approved overall scores",
+        "sql": "select question,question_text,factor,responses,favorable_pct,state from scorecard where survey_id=$1 order by question"
+      }
+    ]
+  },
+  {
+    "name": "action-plan",
+    "title": "Engagement action plan",
+    "for_each": "select id,code from actions order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Commitment",
+        "sql": "select code,name,owner,status,due_on,review_on,baseline_pct,target_pct from action_queue where id=$1",
+        "layout": "record"
+      },
+      {
+        "title": "Progress evidence",
+        "sql": "select note,progress,evidence_ref,created_at from checkins where action_id=$1 order by created_at"
+      }
+    ]
+  },
+  {
+    "name": "outcome-note",
+    "title": "Action outcome review",
+    "for_each": "select id,code from actions where status='done' order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Before and after",
+        "note": "Overall scores are observational. A score change does not establish causation.",
+        "sql": "select code,name,baseline_survey,question,baseline_pct,followup_survey,followup_pct,target_pct,outcome from outcome_review where id=$1",
+        "layout": "record"
+      },
+      {
+        "title": "Completion evidence",
+        "sql": "select completed_on,completion_ref,review_on from actions where id=$1",
+        "layout": "record"
+      }
     ]
   }
 ]

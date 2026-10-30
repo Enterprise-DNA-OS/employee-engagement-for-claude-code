@@ -1,0 +1,9 @@
+{
+  "scope": "overall",
+  "question_code": "Question Code",
+  "question": "Question",
+  "factor": "Factor",
+  "responses": "Responses",
+  "score": "Favorable",
+  "ignore": []
+}

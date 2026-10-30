@@ -1,0 +1,24 @@
+{
+  "captured": "2026-10-30T03:24:19.058Z",
+  "source": "Fictional seeded data, actual CLI stdout",
+  "screens": [
+    {
+      "title": "Keep commitments moving",
+      "ask": "Which engagement actions need attention this week?",
+      "command": "npm run engagement -- attention",
+      "output": "  code  name                                   owner         attention   latest progress\n  ----  -------------------------------------  ------------  ----------  ---------------\n  A01   Set a weekly workload check            Avery Chen    review due  not recorded   \n  A02   Introduce a manager commitment review  Morgan Patel  review due  not recorded   \n  A03   Remove duplicate service handovers     Avery Chen    overdue     blocked"
+    },
+    {
+      "title": "Follow the evidence",
+      "ask": "Did completed actions meet their later survey targets?",
+      "command": "npm run engagement -- outcome-review",
+      "output": "  code  question  baseline %  followup %  target %  change points  outcome           \n  ----  --------  ----------  ----------  --------  -------------  ------------------\n  A01   Q01       48.00       withheld    65.00     withheld       follow-up withheld\n  A02   Q02       55.00       72.00       70.00     17.00          target met"
+    },
+    {
+      "title": "Protect withheld results",
+      "ask": "Which survey scores must stay withheld?",
+      "command": "npm run engagement -- confidentiality",
+      "output": "  survey  question  state     \n  ------  --------  ----------\n  S01     Q04       suppressed\n  S02     Q04       suppressed\n  S03     Q01       unknown"
+    }
+  ]
+}
