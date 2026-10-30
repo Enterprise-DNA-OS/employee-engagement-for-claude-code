@@ -6,7 +6,7 @@ Turn your overall employee survey results into owned action plans, evidence and 
 |---|---|---|
 | Free, MIT. Install the demo and use your own database. | Your questions, action rules, history mapping and management papers. | Installed and operated through Omni by Enterprise DNA. One setup fee, then a retainer. |
 
-[Get your version built](https://enterprisedna.co/omni/book/?offer=replace-software&utm_campaign=culture-amp&utm_source=github&utm_medium=readme) · [Instead of Culture Amp](https://enterprisedna.co/omni/instead-of/culture-amp)
+[Get your version built](https://enterprisedna.co/omni/book/?offer=replace-software&utm_campaign=culture-amp&utm_source=github&utm_medium=readme) · [Instead of Culture Amp](https://enterprisedna.co/omni/instead-of/culture-amp?utm_source=github&utm_medium=readme&utm_campaign=culture-amp)
 
 ## Quick start
 
